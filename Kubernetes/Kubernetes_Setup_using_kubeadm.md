@@ -121,8 +121,8 @@ This documentation guides you in setting up a cluster with one master node and t
     To Get component status
     ```sh
     kubectl get cs
-    ```sh
+    ```
     kubctl get pods
-    ```sh
+    ```
     kubctl get pond -n kube-system
     
