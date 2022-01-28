@@ -104,16 +104,17 @@ This documentation guides you in setting up a cluster with one master node and t
     sudo su - kubeadmin 
     kubectl create -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
     ```
-    To Get component status
+        
+1. Cluster join command
+    ```sh
+    kubeadm token create --print-join-command
+    ```
+1.  To Get component status
     ```sh
     kubctl get pods
     ```sh
     kubctl get pond -n kube-system
     
-1. Cluster join command
-    ```sh
-    kubeadm token create --print-join-command
-    ```
 ## `On Worker Node:`
 1. Add worker nodes to cluster 
     > Use the output from __kubeadm token create__ command in previous step from the master server and run here.
