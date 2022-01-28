@@ -104,7 +104,12 @@ This documentation guides you in setting up a cluster with one master node and t
     sudo su - kubeadmin 
     kubectl create -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
     ```
-
+    To Get component status
+    ```sh
+    kubctl get pods
+    ```sh
+    kubctl get pond -n kube-system
+    
 1. Cluster join command
     ```sh
     kubeadm token create --print-join-command
@@ -122,7 +127,4 @@ This documentation guides you in setting up a cluster with one master node and t
     ```sh
     kubectl get cs
     ```sh
-    kubctl get pods
-    ```sh
-    kubctl get pond -n kube-system
-    
+  
